@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Southern Caribbean Cruise Itinerary | Passports & Postcards Travel Design</title>
+<style>
+:root{
+  --navy:#173760;
+  --navy-dark:#102a4a;
+  --gold:#c99a3d;
+  --gold-light:#e6c87d;
+  --cream:#f8f5ef;
+  --white:#ffffff;
+  --text:#263548;
+  --muted:#6f7782;
+  --border:#ded8cd;
+  --shadow:0 8px 24px rgba(16,42,74,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:var(--cream);
+  line-height:1.55;
+}
+a{color:inherit}
+.header{
+  position:relative;
+  min-height:360px;
+  color:#fff;
+  background:
+    linear-gradient(90deg,rgba(8,35,68,.82) 0%,rgba(8,35,68,.62) 42%,rgba(8,35,68,.16) 72%,rgba(8,35,68,.05) 100%),
+    url("images/hero.png") center center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  border-bottom:12px solid var(--navy);
+}
+.header-inner{
+  width:100%;
+  max-width:1280px;
+  margin:auto;
+  padding:42px 38px;
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+.logo{
+  width:190px;
+  max-height:110px;
+  object-fit:contain;
+}
+.header-divider{
+  width:1px;
+  height:110px;
+  background:var(--gold-light);
+}
+.header-copy{max-width:680px;text-shadow:0 2px 10px rgba(0,0,0,.35)}
+.header-copy h1{
+  margin:0 0 7px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(34px,4.5vw,58px);
+  line-height:1.05;
+  font-weight:600;
+}
+.header-copy p{
+  margin:3px 0;
+  color:#fff;
+  font-size:clamp(15px,1.7vw,20px);
+}
+.header-tagline{
+  margin-top:12px!important;
+  color:var(--gold-light)!important;
+  font-family:"Snell Roundhand","Apple Chancery","Brush Script MT",cursive;
+  font-size:clamp(25px,3vw,39px)!important;
+  line-height:1.05;
+  text-shadow:0 2px 8px rgba(0,0,0,.4);
+}
+.shell{
+  max-width:1280px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:245px minmax(0,1fr);
+  gap:28px;
+  padding:28px 22px 50px;
+}
+.sidebar{
+  position:sticky;
+  top:18px;
+  align-self:start;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:18px;
+  box-shadow:var(--shadow);
+}
+.sidebar h3{
+  font-family:Georgia,"Times New Roman",serif;
+  color:var(--navy);
+  margin:0 0 10px;
+  font-size:20px;
+}
+.sidebar a{
+  display:block;
+  text-decoration:none;
+  padding:8px 10px;
+  margin:2px 0;
+  border-radius:8px;
+  font-size:14px;
+}
+.sidebar a:hover{background:#f3efe6;color:var(--navy)}
+.main{min-width:0}
+.card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:28px;
+  margin-bottom:24px;
+  box-shadow:var(--shadow);
+}
+.section-title{
+  font-family:Georgia,"Times New Roman",serif;
+  color:var(--navy);
+  font-size:30px;
+  margin:0 0 8px;
+}
+.eyebrow{
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:var(--gold);
+  font-weight:700;
+  font-size:12px;
+  margin-bottom:6px;
+}
+.summary-grid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:12px;
+  margin-top:20px;
+}
+.summary-item{
+  background:#fbfaf7;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:14px;
+}
+.summary-item strong{
+  display:block;
+  color:var(--navy);
+  font-size:13px;
+  margin-bottom:3px;
+}
+.day-head{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:flex-start;
+  margin-bottom:18px;
+}
+.day-date{
+  color:var(--gold);
+  font-weight:700;
+}
+.day-head h2{
+  margin:2px 0 0;
+  font-family:Georgia,"Times New Roman",serif;
+  color:var(--navy);
+  font-size:30px;
+}
+.time-badge{
+  background:var(--navy);
+  color:#fff;
+  padding:9px 12px;
+  border-radius:999px;
+  font-size:13px;
+  white-space:nowrap;
+}
+.two-col{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:24px;
+}
+.info-box{
+  background:#fbfaf7;
+  border-left:4px solid var(--gold);
+  border-radius:10px;
+  padding:16px 18px;
+  margin:15px 0;
+}
+.info-box h3,.content h3{
+  color:var(--navy);
+  margin:0 0 8px;
+  font-family:Georgia,"Times New Roman",serif;
+}
+ul{padding-left:20px;margin:8px 0}
+li{margin:5px 0}
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin-top:20px;
+}
+.gallery.two-images{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+
+.gallery figure{
+  margin:0;
+  min-height:145px;
+  border-radius:12px;
+  overflow:hidden;
+  background:#ece7dd;
+  position:relative;
+}
+.gallery img{
+  width:100%;
+  height:165px;
+  object-fit:cover;
+  display:block;
+}
+.gallery figcaption{
+  padding:8px 10px;
+  font-size:12px;
+  color:var(--muted);
+  background:#fff;
+  border:1px solid var(--border);
+  border-top:0;
+}
+.img-fallback{
+  min-height:165px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:16px;
+  text-align:center;
+  color:var(--muted);
+  background:#f1ede5;
+  border:1px dashed #c8c0b2;
+}
+.notice{
+  font-size:13px;
+  color:var(--muted);
+}
+.check-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px 28px;
+}
+.small-note{
+  font-size:13px;
+  color:var(--muted);
+}
+.footer{
+  background:var(--navy-dark);
+  color:#fff;
+  padding:34px 24px;
+  text-align:center;
+}
+.footer h3{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:24px;
+  margin:0 0 10px;
+}
+.footer p{margin:4px 0}
+.footer .tagline{color:var(--gold-light);margin-top:16px}
+.footer .tagline-script{
+  font-family:"Snell Roundhand","Apple Chancery","Brush Script MT",cursive;
+  font-size:1.35em;
+  font-weight:400;
+  letter-spacing:.01em;
+}
+.top-link{
+  display:inline-block;
+  margin-top:10px;
+  color:var(--navy);
+  font-size:13px;
+}
+@media(max-width:980px){
+  .shell{grid-template-columns:1fr}
+  .sidebar{position:relative;top:auto}
+  .sidebar nav{columns:2}
+  .summary-grid{grid-template-columns:repeat(2,1fr)}
+  .two-col{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .port-gallery{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media(max-width:620px){
+  .header{min-height:430px;background-position:62% center}
+  .header-inner{flex-direction:column;text-align:center;justify-content:center;padding:32px 18px;background:rgba(8,35,68,.28)}
+  .header-divider{width:80px;height:1px}
+  .logo{width:165px}
+  .shell{padding:18px 12px 36px}
+  .card{padding:20px}
+  .sidebar nav{columns:1}
+  .summary-grid{grid-template-columns:1fr}
+  .day-head{flex-direction:column}
+  .gallery{grid-template-columns:1fr}
+  .port-gallery{grid-template-columns:1fr}
+  .gallery.two-images{grid-template-columns:1fr}
+  .gallery img,.img-fallback{height:210px}
+  .check-grid{grid-template-columns:1fr}
+}
+</style>
+<script>
+function imageFallback(img,label){
+  const figure=img.closest('figure');
+  figure.innerHTML='<div class="img-fallback">'+label+'</div>';
+}
+</script>
+</head>
+
+<body id="top">
+<header class="header">
+  <div class="header-inner">
+    <img class="logo" src="https://passports-postcards.github.io/travel/pp-logo-white.png" alt="Passports & Postcards Travel Design">
+    <div class="header-divider"></div>
+    <div class="header-copy">
+      <h1>Southern Caribbean Cruise</h1>
+      <p>Celebrity Silhouette • December 5–13, 2026</p>
+      <p>Fort Lauderdale • Aruba • Curaçao • Bonaire</p>
+      <p class="header-tagline">Turning plans into postcards.</p>
+    </div>
+  </div>
+</header>
+
+<div class="shell">
+  <aside class="sidebar">
+    <h3>Your Itinerary</h3>
+    <nav>
+      <a href="#overview">Trip Overview</a>
+      <a href="#day1">Dec 5 • Fort Lauderdale</a>
+      <a href="#day2">Dec 6 • At Sea</a>
+      <a href="#day3">Dec 7 • At Sea</a>
+      <a href="#day4">Dec 8 • Aruba</a>
+      <a href="#day5">Dec 9 • Curaçao</a>
+      <a href="#day6">Dec 10 • Bonaire</a>
+      <a href="#day7">Dec 11 • At Sea</a>
+      <a href="#day8">Dec 12 • At Sea</a>
+      <a href="#day9">Dec 13 • Fort Lauderdale</a>
+      <a href="#weather">Weather</a>
+      <a href="#packing">Packing List</a>
+      <a href="#reminders">Travel Reminders</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <section class="card" id="overview">
+      <div class="eyebrow">Trip Overview</div>
+      <h2 class="section-title">Eight Nights in the Southern Caribbean</h2>
+      <p>Set sail from Fort Lauderdale aboard <strong>Celebrity Silhouette</strong> for an eight-night getaway featuring two relaxing sea days, three colorful ABC-island ports, and two final days at sea before returning to Florida.</p>
+
+      <div class="summary-grid">
+        <div class="summary-item"><strong>Ship</strong>Celebrity Silhouette</div>
+        <div class="summary-item"><strong>Travel Dates</strong>Dec. 5–13, 2026</div>
+        <div class="summary-item"><strong>Travelers</strong>2 Adults</div>
+        <div class="summary-item"><strong>Cabin</strong>Veranda #7216</div>
+        <div class="summary-item"><strong>Roundtrip Port</strong>Fort Lauderdale</div>
+      </div>
+
+      <div class="gallery two-images">
+        <figure><img src="images/ship-intro-1.jpg" alt="Celebrity Silhouette" onerror="imageFallback(this,'Celebrity Silhouette exterior photo')"><figcaption>Celebrity Silhouette</figcaption></figure>
+        <figure><img src="images/ship-intro-2.jpg" alt="Veranda cabin" onerror="imageFallback(this,'Veranda cabin photo')"><figcaption>Veranda Cabin</figcaption></figure>
+      </div>
+
+      <div class="info-box">
+        <h3>Important</h3>
+        <p>Confirmation numbers are intentionally not shown on this public itinerary page. Keep the confirmation details sent separately by your travel advisor with your travel documents.</p>
+      </div>
+    </section>
+
+    <section class="card" id="day1">
+      <div class="day-head">
+        <div>
+          <div class="day-date">Saturday • December 5, 2026</div>
+          <h2>Fort Lauderdale • Embarkation Day</h2>
+        </div>
+        <div class="time-badge">Check-in window: 10:30 AM–2:30 PM</div>
+      </div>
+
+      <div class="two-col">
+        <div class="content">
+          <p>Welcome to Fort Lauderdale and the start of your Southern Caribbean cruise. Today is about getting to Port Everglades, checking in, boarding Celebrity Silhouette, and settling into your veranda cabin.</p>
+
+          <div class="info-box">
+            <h3>Port Everglades</h3>
+            <p><strong>Cruise Port:</strong> Port Everglades, Fort Lauderdale, Florida</p>
+            <p><strong>Terminal:</strong> Verify the assigned terminal in the Celebrity app or your final cruise documents before departure. Terminal assignments can change.</p>
+            <p><strong>If Terminal 25 is assigned:</strong> 2025 Eller Drive, Hollywood, FL 33316.</p>
+          </div>
+
+          <h3>Parking & Drop-Off</h3>
+          <ul>
+            <li>Follow Port Everglades electronic signs to the ship and assigned terminal.</li>
+            <li>Rideshare and taxi drivers can drop passengers at the terminal entrance.</li>
+            <li>If parking, follow signs for the garage serving your assigned terminal and allow extra time for port security.</li>
+          </ul>
+
+          <h3>Before You Board</h3>
+          <ul>
+            <li>Complete Celebrity online check-in and keep the Celebrity app available.</li>
+            <li>Have required identification and cruise documents accessible.</li>
+            <li>Attach luggage tags before handing larger bags to porters.</li>
+            <li>Keep medications, valuables, travel documents, electronics, chargers, and anything needed during the first few hours in your carry-on.</li>
+            <li>Consider packing a swimsuit, sunscreen, and a change of clothes in your carry-on because checked luggage may arrive at the cabin later.</li>
+          </ul>
+        </div>
+
+        <div class="content">
+          <h3>If You Have Extra Time in Fort Lauderdale</h3>
+          <ul>
+            <li>Stroll the Fort Lauderdale beachfront promenade.</li>
+            <li>Explore shops, galleries, and restaurants along Las Olas Boulevard.</li>
+            <li>Take a Water Taxi ride for views of the city’s canals and waterfront homes.</li>
+            <li>Walk part of the Riverwalk along the New River.</li>
+          </ul>
+          <p class="small-note">Keep sightseeing light on embarkation day unless you are already in Fort Lauderdale with plenty of time before your assigned arrival window.</p>
+        </div>
+      </div>
+
+      <div class="gallery two-images">
+        <figure><img src="images/fort-lauderdale-1.jpg" alt="Port Everglades" onerror="imageFallback(this,'Port Everglades photo')"><figcaption>Port Everglades</figcaption></figure>
+        <figure><img src="images/fort-lauderdale-2.jpg" alt="Fort Lauderdale" onerror="imageFallback(this,'Fort Lauderdale photo')"><figcaption>Fort Lauderdale</figcaption></figure>
+      </div>
+      <a class="top-link" href="#top">Back to top ↑</a>
+    </section>
+
+    <section class="card" id="day2">
+      <div class="day-head">
+        <div>
+          <div class="day-date">Sunday • December 6, 2026</div>
+          <h2>At Sea</h2>
+        </div>
+        <div class="time-badge">Enjoy Celebrity Silhouette</div>
+      </div>
+      <p>A full day at sea gives you time to settle into vacation mode and explore the ship at your own pace.</p>
+      <h3>Ideas for Today</h3>
+      <ul>
+        <li>Relax by the pool or find a quiet spot with an ocean view.</li>
+        <li>Spend time at The Lawn Club and enjoy the real-grass top deck.</li>
+        <li>Book spa or wellness time if that is part of your vacation plans.</li>
+        <li>Try a specialty or casual dining venue, coffee stop, or lounge.</li>
+        <li>Check the Celebrity app or daily schedule for live music, theater, games, classes, and evening entertainment.</li>
+      </ul>
+      <div class="gallery two-images">
+        <figure><img src="images/sea1-1.jpg" alt="Celebrity Silhouette Pool Deck" onerror="imageFallback(this,'Pool Deck photo')"><figcaption>Pool Deck</figcaption></figure>
+        <figure><img src="images/sea1-2.jpg" alt="The Lawn Club aboard Celebrity Silhouette" onerror="imageFallback(this,'The Lawn Club photo')"><figcaption>The Lawn Club</figcaption></figure>
+      </div>
+      <a class="top-link" href="#top">Back to top ↑</a>
+    </section>
+
+    <section class="card" id="day3">
+      <div class="day-head">
+        <div>
+          <div class="day-date">Monday • December 7, 2026</div>
+          <h2>At Sea</h2>
+        </div>
+        <div class="time-badge">Second Sea Day</div>
+      </div>
+      <p>Another unhurried sea day before reaching Aruba. This is a good day to enjoy anything you missed yesterday and make plans for the three port days ahead.</p>
+      <h3>Ideas for Today</h3>
+      <ul>
+        <li>Enjoy a leisurely breakfast and some time on deck.</li>
+        <li>Explore onboard shops, lounges, entertainment, and enrichment activities.</li>
+        <li>Review tomorrow’s Aruba plans and your preferred transportation or sightseeing options.</li>
+        <li>Charge phones and cameras and prepare a small port-day bag.</li>
+      </ul>
+      <div class="gallery two-images">
+        <figure><img src="images/sea2-1.jpg" alt="Breakfast at sea aboard Celebrity Silhouette" onerror="imageFallback(this,'Breakfast at Sea photo')"><figcaption>Breakfast at Sea</figcaption></figure>
+        <figure><img src="images/sea2-2.jpg" alt="Sky Observation Lounge aboard Celebrity Silhouette" onerror="imageFallback(this,'Sky Observation Lounge photo')"><figcaption>Sky Observation Lounge</figcaption></figure>
+      </div>
+      <a class="top-link" href="#top">Back to top ↑</a>
+    </section>
+
+    <section class="card" id="day4">
+      <div class="day-head">
+        <div>
+          <div class="day-date">Tuesday • December 8, 2026</div>
+          <h2>Aruba</h2>
+        </div>
+        <div class="time-badge">8:00 AM–11:00 PM</div>
+      </div>
+      <p>Aruba offers a long port day with plenty of time for beaches, sightseeing, shopping, dining, and sunset views. The island is known for bright turquoise water, white-sand beaches, and a dry, breezy climate.</p>
+      <h3>Sightseeing Ideas</h3>
+      <ul>
+        <li><strong>Eagle Beach:</strong> wide white sand, clear water, and Aruba’s famous fofoti trees.</li>
+        <li><strong>Oranjestad:</strong> colorful Dutch-Caribbean architecture, shops, restaurants, and an easy wander near the cruise port.</li>
+        <li><strong>California Lighthouse:</strong> panoramic island views from Aruba’s northwest tip.</li>
+        <li><strong>Arikok National Park:</strong> rugged desert scenery, caves, coastline, and a very different side of the island.</li>
+      </ul>
+      <div class="gallery port-gallery">
+        <figure><img src="images/aruba-1.jpg" alt="Eagle Beach" onerror="imageFallback(this,'Eagle Beach photo')"><figcaption>Eagle Beach</figcaption></figure>
+        <figure><img src="images/aruba-2.jpg" alt="Oranjestad" onerror="imageFallback(this,'Oranjestad photo')"><figcaption>Oranjestad</figcaption></figure>
+        <figure><img src="images/aruba-3.jpg" alt="California Lighthouse" onerror="imageFallback(this,'California Lighthouse photo')"><figcaption>California Lighthouse</figcaption></figure>
+        <figure><img src="images/aruba-4.jpg" alt="Arikok National Park" onerror="imageFallback(this,'Arikok National Park photo')"><figcaption>Arikok National Park</figcaption></figure>
+      </div>
+      <a class="top-link" href="#top">Back to top ↑</a>
+    </section>
+
+    <section class="card" id="day5">
+      <div class="day-head">
+        <div>
+          <div class="day-date">Wednesday • December 9, 2026</div>
+          <h2>Curaçao</h2>
+        </div>
+        <div class="time-badge">8:00 AM–6:00 PM</div>
+      </div>
+      <p>Curaçao blends beaches, history, and distinctive Dutch-Caribbean architecture. Willemstad is especially easy to enjoy on foot and makes a colorful centerpiece for the day.</p>
+      <h3>Sightseeing Ideas</h3>
+      <ul>
+        <li><strong>Willemstad:</strong> explore the colorful waterfront and historic districts.</li>
+        <li><strong>Queen Emma Bridge:</strong> walk the floating pedestrian bridge linking Punda and Otrobanda.</li>
+        <li><strong>Grote Knip Beach:</strong> enjoy one of Curaçao’s most scenic beaches, known for clear turquoise water and a beautiful sheltered bay.</li>
+        <li><strong>Hato Caves:</strong> explore limestone caves filled with stalactites, stalagmites, and fascinating island history.</li>
+      </ul>
+      <div class="gallery port-gallery">
+        <figure><img src="images/curacao-1.jpg" alt="Willemstad" onerror="imageFallback(this,'Willemstad photo')"><figcaption>Willemstad</figcaption></figure>
+        <figure><img src="images/curacao-2.jpg" alt="Queen Emma Bridge" onerror="imageFallback(this,'Queen Emma Bridge photo')"><figcaption>Queen Emma Bridge</figcaption></figure>
+        <figure><img src="images/curacao-3.jpg" alt="Grote Knip Beach" onerror="imageFallback(this,'Grote Knip Beach photo')"><figcaption>Grote Knip Beach</figcaption></figure>
+        <figure><img src="images/curacao-4.jpg" alt="Hato Caves" onerror="imageFallback(this,'Hato Caves photo')"><figcaption>Hato Caves</figcaption></figure>
+      </div>
+      <a class="top-link" href="#top">Back to top ↑</a>
+    </section>
+
+    <section class="card" id="day6">
+      <div class="day-head">
+        <div>
+          <div class="day-date">Thursday • December 10, 2026</div>
+          <h2>Bonaire</h2>
+        </div>
+        <div class="time-badge">7:00 AM–4:00 PM</div>
+      </div>
+      <p>Bonaire is prized for clear water, reefs, wildlife, rugged scenery, and a relaxed island feel. It is especially well known for snorkeling and diving, but there is plenty to see from land too.</p>
+      <h3>Sightseeing Ideas</h3>
+      <ul>
+        <li><strong>Kralendijk:</strong> stroll the colorful waterfront and compact town center.</li>
+        <li><strong>Klein Bonaire:</strong> take a water taxi for beach time and excellent snorkeling conditions.</li>
+        <li><strong>Flamingos:</strong> look for Bonaire’s famous flamingos in the island’s protected natural areas.</li>
+        <li><strong>Washington Slagbaai National Park:</strong> discover rugged scenery, turquoise water, cactus landscapes, and historic buildings.</li>
+      </ul>
+      <div class="gallery port-gallery">
+        <figure><img src="images/bonaire-1.jpg" alt="Kralendijk" onerror="imageFallback(this,'Kralendijk photo')"><figcaption>Kralendijk</figcaption></figure>
+        <figure><img src="images/bonaire-2.jpg" alt="Klein Bonaire" onerror="imageFallback(this,'Klein Bonaire photo')"><figcaption>Klein Bonaire</figcaption></figure>
+        <figure><img src="images/bonaire-3.jpg" alt="Flamingos in Bonaire" onerror="imageFallback(this,'Flamingos photo')"><figcaption>Flamingos</figcaption></figure>
+        <figure><img src="images/bonaire-4.jpg" alt="Washington Slagbaai National Park" onerror="imageFallback(this,'Washington Slagbaai National Park photo')"><figcaption>Washington Slagbaai National Park</figcaption></figure>
+      </div>
+      <a class="top-link" href="#top">Back to top ↑</a>
+    </section>
+
+    <section class="card" id="day7">
+      <div class="day-head">
+        <div>
+          <div class="day-date">Friday • December 11, 2026</div>
+          <h2>At Sea</h2>
+        </div>
+        <div class="time-badge">Relax & Recharge</div>
+      </div>
+      <p>After three island days, enjoy a slower day onboard. This is a good time for the pool, spa, a favorite dining venue, or simply doing very little.</p>
+      <h3>Ideas for Today</h3>
+      <ul>
+        <li>Sleep in and enjoy a leisurely breakfast.</li>
+        <li>Spend time by the pool or at The Lawn Club.</li>
+        <li>Enjoy a spa treatment, fitness class, or quiet indoor lounge.</li>
+        <li>Catch a show, live music, trivia, or another activity listed in the Celebrity app.</li>
+      </ul>
+      <div class="gallery two-images">
+        <figure><img src="images/sea3-1.jpg" alt="The Spa aboard Celebrity Silhouette" onerror="imageFallback(this,'The Spa photo')"><figcaption>The Spa</figcaption></figure>
+        <figure><img src="images/sea3-2.jpg" alt="Silhouette Theatre" onerror="imageFallback(this,'Silhouette Theatre photo')"><figcaption>Silhouette Theatre</figcaption></figure>
+      </div>
+      <a class="top-link" href="#top">Back to top ↑</a>
+    </section>
+
+    <section class="card" id="day8">
+      <div class="day-head">
+        <div>
+          <div class="day-date">Saturday • December 12, 2026</div>
+          <h2>At Sea</h2>
+        </div>
+        <div class="time-badge">Final Full Day</div>
+      </div>
+      <p>Enjoy the final full day onboard before returning to Fort Lauderdale. Leave time to revisit favorite spaces, enjoy one last special meal, and get organized for disembarkation.</p>
+      <h3>Ideas for Today</h3>
+      <ul>
+        <li>Enjoy your favorite onboard venues one more time.</li>
+        <li>Review your onboard account and address any questions before the final morning.</li>
+        <li>Check disembarkation instructions and luggage procedures in the app or delivered materials.</li>
+        <li>Pack most belongings tonight, keeping tomorrow morning’s essentials with you.</li>
+      </ul>
+      <div class="gallery two-images">
+        <figure><img src="images/sea4-1.jpg" alt="Specialty dining aboard Celebrity Silhouette" onerror="imageFallback(this,'Specialty Dining photo')"><figcaption>Specialty Dining</figcaption></figure>
+        <figure><img src="images/sea4-2.jpg" alt="Sunset at sea from Celebrity Silhouette" onerror="imageFallback(this,'Sunset at Sea photo')"><figcaption>Sunset at Sea</figcaption></figure>
+      </div>
+      <a class="top-link" href="#top">Back to top ↑</a>
+    </section>
+
+    <section class="card" id="day9">
+      <div class="day-head">
+        <div>
+          <div class="day-date">Sunday • December 13, 2026</div>
+          <h2>Fort Lauderdale • Disembarkation</h2>
+        </div>
+        <div class="time-badge">Scheduled arrival: 7:00 AM</div>
+      </div>
+
+      <p>Celebrity Silhouette returns to Fort Lauderdale this morning. Actual time off the ship depends on clearance, luggage arrangements, and the disembarkation group assigned onboard.</p>
+
+      <h3>Disembarkation Checklist</h3>
+      <ul>
+        <li>Follow the luggage and disembarkation instructions provided onboard.</li>
+        <li>Keep identification, travel documents, medications, valuables, and electronics with you.</li>
+        <li>Review the final onboard account before leaving the ship.</li>
+        <li>Double-check drawers, closets, the safe, bathroom, outlets, and balcony before leaving the cabin.</li>
+        <li>Allow plenty of time before any same-day flight or ground transportation connection.</li>
+      </ul>
+
+      <h3>If You Have Time in Fort Lauderdale</h3>
+      <ul>
+        <li>Enjoy breakfast or lunch along Las Olas Boulevard.</li>
+        <li>Take a Water Taxi ride or stroll along the Riverwalk.</li>
+        <li>Spend a few hours at Fort Lauderdale Beach if your onward travel schedule allows.</li>
+      </ul>
+      <a class="top-link" href="#top">Back to top ↑</a>
+    </section>
+
+    <section class="card" id="weather">
+      <div class="eyebrow">Plan Ahead</div>
+      <h2 class="section-title">Typical December Weather</h2>
+      <p>Expect warm tropical conditions in Aruba, Curaçao, and Bonaire, with daytime temperatures commonly in the 80s°F, strong Caribbean sun, breezes, and the possibility of brief showers. Fort Lauderdale is usually warm but can be cooler than the islands, especially mornings and evenings.</p>
+      <div class="info-box">
+        <h3>Before You Leave</h3>
+        <p>Check the actual forecast for Fort Lauderdale and each island about a week before departure and adjust clothing or rain protection as needed.</p>
+      </div>
+    </section>
+
+    <section class="card" id="packing">
+      <div class="eyebrow">Tailored for This Trip</div>
+      <h2 class="section-title">Packing List</h2>
+      <div class="check-grid">
+        <div>
+          <h3>Caribbean Days</h3>
+          <ul>
+            <li>Lightweight, breathable clothing</li>
+            <li>Swimsuits and cover-ups</li>
+            <li>Reef-safe or destination-appropriate sunscreen</li>
+            <li>Hat and sunglasses</li>
+            <li>Comfortable walking shoes</li>
+            <li>Sandals or water shoes if desired</li>
+            <li>Small day bag or beach bag</li>
+            <li>Refillable water bottle</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Onboard & Evenings</h3>
+          <ul>
+            <li>Smart Casual dinner outfits</li>
+            <li>One or two Evening Chic options if desired</li>
+            <li>Light sweater or wrap for cool indoor spaces</li>
+            <li>Workout clothes if using the fitness center</li>
+            <li>Phone/camera chargers</li>
+            <li>Portable battery pack</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Carry-On Essentials</h3>
+          <ul>
+            <li>Required ID and travel documents</li>
+            <li>Prescription medications</li>
+            <li>Valuables and electronics</li>
+            <li>Swimsuit/change of clothes</li>
+            <li>Any essentials needed before checked bags arrive</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Health & Comfort</h3>
+          <ul>
+            <li>Enough prescription medication for the full trip plus a small buffer</li>
+            <li>Basic over-the-counter medications you normally use</li>
+            <li>Motion-sickness remedy if needed</li>
+            <li>Insect repellent if desired for island outings</li>
+            <li>After-sun care or aloe</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="reminders">
+      <div class="eyebrow">Good to Know</div>
+      <h2 class="section-title">Travel Reminders</h2>
+
+      <h3>Celebrity App & Check-In</h3>
+      <p>Complete online check-in when available, review the Celebrity app before departure, and keep it handy onboard for schedules, dining, activities, and trip information.</p>
+
+      <h3>Dining Dress</h3>
+      <p>Celebrity uses Smart Casual attire for main dining, specialty dining, and the theater, with one or two Evening Chic nights on many itineraries. Check the daily program for the evening’s suggested attire.</p>
+
+      <h3>Money, Tipping & Payments</h3>
+      <p>Most onboard spending is charged to the stateroom account. Carry a credit card and a modest amount of cash for small port purchases, transportation, or gratuities where appropriate. Let your card issuer know you will be traveling internationally if your bank recommends it.</p>
+
+      <h3>Cell Phone, Roaming & Wi-Fi</h3>
+      <p>Review your mobile carrier’s international roaming options before departure. At sea, avoid unintended cellular-at-sea charges by using airplane mode and connecting to ship Wi-Fi when desired. When in port, confirm your phone is using the plan or network you expect before turning cellular data back on.</p>
+
+      <h3>Medications</h3>
+      <p>Keep prescription medications in your carry-on, bring enough for the full trip, and keep any medication that must remain with you out of checked luggage.</p>
+
+      <h3>Port-Day Timing</h3>
+      <p>Ship time and local time may not always be the same. Always follow the ship’s stated all-aboard time and allow a comfortable buffer when exploring independently.</p>
+
+      <h3>Sun & Hydration</h3>
+      <p>The Caribbean sun can be strong even on breezy or partly cloudy days. Use sunscreen, reapply regularly, wear a hat or sunglasses, and drink water throughout the day.</p>
+    </section>
+  </main>
+</div>
+
+<footer class="footer">
+  <h3>Need Help While Traveling?</h3>
+  <p><strong>Pam Brock, Travel Advisor</strong></p>
+  <p>Pam@postcardstraveldesign.com</p>
+  <p>(757) 392-7188</p>
+  <p>postcardstraveldesign.com</p>
+</footer>
+</body>
+</html>

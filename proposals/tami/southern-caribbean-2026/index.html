@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>[TRIP TITLE] | Passports & Postcards Travel Design</title>
+
+<style>
+:root {
+  --navy: #173760;
+  --navy-dark: #102a4a;
+  --gold: #c99a3d;
+  --gold-light: #e6c87d;
+  --cream: #f8f5ef;
+  --white: #ffffff;
+  --text: #263548;
+  --muted: #6f7782;
+  --border: #ded8cd;
+  --shadow: 0 10px 30px rgba(23,55,96,.08);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+img { display: block; max-width: 100%; }
+
+h1,h2,h3,h4 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--navy);
+  font-weight: 500;
+}
+
+.container {
+  width: min(1160px, calc(100% - 36px));
+  margin: auto;
+}
+
+section { padding: 38px 0; }
+
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 38px;
+  margin: 0 0 7px;
+}
+
+.section-title p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* HEADER */
+
+.quote-header {
+  background: var(--navy);
+  color: white;
+  padding: 44px 0;
+}
+
+.quote-header-inner {
+  display: grid;
+  grid-template-columns: 330px 1px 1fr;
+  gap: 42px;
+  align-items: center;
+}
+
+.quote-logo-wrap { text-align: center; }
+
+.quote-logo {
+  width: 290px;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  border-radius: 4px;
+}
+
+.advisor-info {
+  margin-top: 16px;
+  color: white;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.advisor-info strong {
+  display: block;
+  color: var(--gold-light);
+  font-size: 15px;
+}
+
+.advisor-info a {
+  color: white;
+  text-decoration: none;
+}
+
+.header-divider {
+  width: 1px;
+  height: 275px;
+  background: var(--gold);
+}
+
+.quote-title {
+  text-align: center;
+  padding: 10px;
+}
+
+.quote-label {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gold-light);
+  margin-bottom: 12px;
+}
+
+.quote-title h1 {
+  color: white;
+  font-size: clamp(42px, 5vw, 66px);
+  line-height: 1.05;
+  margin: 0 0 15px;
+}
+
+.quote-title h2 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  margin: 0 0 8px;
+}
+
+.quote-title p {
+  margin: 0;
+  font-size: 17px;
+}
+
+/* INTRO */
+
+.intro {
+  max-width: 880px;
+  background: white;
+  margin: -25px auto 45px;
+  padding: 38px;
+  position: relative;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.intro h2 {
+  margin: 8px 0 10px;
+  font-size: 34px;
+}
+
+.intro p {
+  margin: auto;
+  max-width: 700px;
+  color: var(--muted);
+}
+
+/* OVERVIEW */
+
+.trip-overview {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.overview-box {
+  background: white;
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 15px;
+  box-shadow: var(--shadow);
+}
+
+.overview-box strong {
+  color: var(--navy);
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+
+.overview-box span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* JOURNEY */
+
+.route-card {
+  background: var(--navy);
+  color: white;
+  padding: 34px;
+  text-align: center;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.route-card .eyebrow { color: var(--gold-light); }
+
+.route-line {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  margin: 10px auto;
+  max-width: 950px;
+}
+
+.route-card p {
+  color: rgba(255,255,255,.78);
+  margin: 10px auto 0;
+  max-width: 800px;
+}
+
+/* GALLERY */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.gallery-caption { padding: 17px 18px 19px; }
+
+.gallery-caption h3 {
+  font-size: 22px;
+  margin: 0 0 4px;
+}
+
+.gallery-caption p {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0;
+}
+
+/* TRIP DETAILS */
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.trip-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+
+.trip-card h3 {
+  font-size: 27px;
+  margin: 4px 0 3px;
+}
+
+.trip-card .subhead {
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.trip-card ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.trip-card li { margin-bottom: 8px; }
+
+/* OPTIONS */
+
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.option-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow);
+}
+
+.option-card.option-two { border: 2px solid var(--gold); }
+.option-card.option-three { border: 2px solid var(--navy); }
+
+.option-top {
+  padding: 27px 23px;
+  background: #f3f0ea;
+}
+
+.option-two .option-top { background: #f7eedb; }
+
+.option-three .option-top {
+  background: var(--navy);
+  color: white;
+}
+
+.option-name {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--navy);
+  font-size: 27px;
+}
+
+.option-three .option-name,
+.option-three .price { color: white; }
+
+.option-description {
+  color: var(--muted);
+  font-size: 13px;
+  min-height: 42px;
+}
+
+.option-three .option-description,
+.option-three .price-note {
+  color: rgba(255,255,255,.76);
+}
+
+.price {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--navy);
+  font-size: 40px;
+  margin-top: 15px;
+  line-height: 1;
+}
+
+.price-note {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 5px;
+}
+
+.option-body {
+  padding: 25px 23px 28px;
+  flex: 1;
+}
+
+.option-body h4 {
+  margin: 0 0 13px;
+  color: var(--navy);
+}
+
+.option-body ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.option-body li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* NOT INCLUDED */
+
+.not-included {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+
+.not-included h3 {
+  margin-top: 0;
+  font-size: 26px;
+}
+
+.not-included ul {
+  columns: 2;
+  padding-left: 20px;
+}
+
+/* PAYMENT */
+
+.payment {
+  background: var(--navy);
+  color: white;
+  padding: 35px;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.payment h2 {
+  color: white;
+  margin: 0 0 8px;
+  font-size: 34px;
+}
+
+.payment p { color: rgba(255,255,255,.8); }
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.payment-item {
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 10px;
+  padding: 19px;
+}
+
+.payment-item span {
+  display: block;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 10px;
+  margin-bottom: 4px;
+}
+
+.payment-item strong {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+}
+
+.payment-note {
+  display: block;
+  margin-top: 4px;
+  color: rgba(255,255,255,.78);
+  font-size: 12px;
+}
+
+/* RESPONSE */
+
+.response-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.response-section h2 {
+  margin: 7px 0 10px;
+  font-size: 40px;
+}
+
+.response-intro {
+  max-width: 700px;
+  margin: 0 auto 28px;
+  color: var(--muted);
+}
+
+.response-form {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.name-field {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.name-field label,
+.question-box label {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.name-field input,
+.question-box textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: white;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.selection-options {
+  display: grid;
+  gap: 12px;
+}
+
+.selection-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.selection-card:hover { border-color: var(--gold); }
+
+.selection-card input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--navy);
+}
+
+.selection-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.selection-content strong {
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+}
+
+.selection-content span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.question-box {
+  margin-top: 26px;
+  text-align: left;
+}
+
+.question-box textarea { resize: vertical; }
+
+.submit-button {
+  margin-top: 24px;
+  background: var(--navy);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 30px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.submit-button:hover { background: var(--navy-dark); }
+
+.disclaimer {
+  max-width: 900px;
+  margin: 32px auto 0;
+  color: #838991;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* FOOTER */
+
+footer {
+  background: #f0ece4;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 28px 20px;
+}
+
+.footer-tagline {
+  color: var(--gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+footer a {
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .quote-header-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .header-divider { display: none; }
+
+  .option-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-card img { height: 270px; }
+}
+
+@media (max-width: 720px) {
+  .quote-header { padding: 28px 0 46px; }
+
+  .quote-title h1 { font-size: 46px; }
+
+  .trip-overview {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .two-column,
+  .payment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .not-included ul { columns: 1; }
+
+  .intro { padding: 29px 22px; }
+
+  .gallery-card img { height: 220px; }
+}
+</style>
+</head>
+
+<body>
+
+<header class="quote-header">
+  <div class="container quote-header-inner">
+
+    <div class="quote-logo-wrap">
+      <img
+        class="quote-logo"
+        src="https://passports-postcards.github.io/passports-postcards-travel/pp-logo-white.png"
+        alt="Passports & Postcards Travel Design">
+
+      <div class="advisor-info">
+        <strong>Prepared by Pam Brock</strong>
+        Travel Advisor<br>
+        <a href="mailto:Pam@postcardstraveldesign.com">Pam@postcardstraveldesign.com</a><br>
+        <a href="tel:+17573927188">(757) 392-7188</a>
+      </div>
+    </div>
+
+    <div class="header-divider"></div>
+
+    <div class="quote-title">
+      <div class="quote-label">Your Personalized Travel Proposal</div>
+      <h1>[TRIP TITLE]</h1>
+      <h2>[TRIP SUBTITLE]</h2>
+      <p>[SUPPLIER / RESORT / SHIP] &nbsp;•&nbsp; [TRAVEL DATES]</p>
+    </div>
+
+  </div>
+</header>
+
+<main>
+<div class="container">
+
+<div class="intro">
+  <div class="eyebrow">[TRIP TYPE]</div>
+  <h2>[INTRO HEADLINE]</h2>
+  <p>[SHORT INTRODUCTION TO THE TRIP]</p>
+</div>
+
+<section>
+  <div class="section-title">
+    <h2>Trip Overview</h2>
+    <p>[SHORT OVERVIEW SUBTITLE]</p>
+  </div>
+
+  <div class="trip-overview">
+    <div class="overview-box">
+      <strong>[OVERVIEW 1]</strong>
+      <span>[DETAIL]</span>
+    </div>
+    <div class="overview-box">
+      <strong>[OVERVIEW 2]</strong>
+      <span>[DETAIL]</span>
+    </div>
+    <div class="overview-box">
+      <strong>[OVERVIEW 3]</strong>
+      <span>[DETAIL]</span>
+    </div>
+    <div class="overview-box">
+      <strong>[OVERVIEW 4]</strong>
+      <span>[DETAIL]</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="route-card">
+    <div class="eyebrow">Your Journey</div>
+    <div class="route-line">[ROUTE / DESTINATIONS / TRIP FLOW]</div>
+    <p>[SHORT JOURNEY DESCRIPTION]</p>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">
+    <div class="eyebrow">Destination Highlights</div>
+    <h2>A Glimpse of Your Journey</h2>
+    <p>A few highlights to look forward to along the way</p>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="gallery-card">
+      <img src="images/destination-1.jpg" alt="[DESTINATION 1]">
+      <div class="gallery-caption">
+        <h3>[DESTINATION 1]</h3>
+        <p>[SHORT DESTINATION DESCRIPTION]</p>
+      </div>
+    </div>
+
+    <div class="gallery-card">
+      <img src="images/destination-2.jpg" alt="[DESTINATION 2]">
+      <div class="gallery-caption">
+        <h3>[DESTINATION 2]</h3>
+        <p>[SHORT DESTINATION DESCRIPTION]</p>
+      </div>
+    </div>
+
+    <div class="gallery-card">
+      <img src="images/destination-3.jpg" alt="[DESTINATION 3]">
+      <div class="gallery-caption">
+        <h3>[DESTINATION 3]</h3>
+        <p>[SHORT DESTINATION DESCRIPTION]</p>
+      </div>
+    </div>
+
+    <div class="gallery-card">
+      <img src="images/destination-4.jpg" alt="[DESTINATION 4]">
+      <div class="gallery-caption">
+        <h3>[DESTINATION 4]</h3>
+        <p>[SHORT DESTINATION DESCRIPTION]</p>
+      </div>
+    </div>
+
+    <div class="gallery-card">
+      <img src="images/destination-5.jpg" alt="[DESTINATION 5]">
+      <div class="gallery-caption">
+        <h3>[DESTINATION 5]</h3>
+        <p>[SHORT DESTINATION DESCRIPTION]</p>
+      </div>
+    </div>
+
+    <div class="gallery-card">
+      <img src="images/destination-6.jpg" alt="[DESTINATION 6]">
+      <div class="gallery-caption">
+        <h3>[DESTINATION 6]</h3>
+        <p>[SHORT DESTINATION DESCRIPTION]</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">
+    <h2>[TRIP DETAILS HEADLINE]</h2>
+    <p>[TRIP DETAILS SUBTITLE]</p>
+  </div>
+
+  <div class="two-column">
+    <div class="trip-card">
+      <div class="eyebrow">[SECTION 1 LABEL]</div>
+      <h3>[SECTION 1 TITLE]</h3>
+      <div class="subhead">[SECTION 1 SUBHEAD]</div>
+      <ul>
+        <li>[DETAIL]</li>
+        <li>[DETAIL]</li>
+        <li>[DETAIL]</li>
+        <li>[DETAIL]</li>
+      </ul>
+    </div>
+
+    <div class="trip-card">
+      <div class="eyebrow">[SECTION 2 LABEL]</div>
+      <h3>[SECTION 2 TITLE]</h3>
+      <div class="subhead">[SECTION 2 SUBHEAD]</div>
+      <ul>
+        <li>[DETAIL]</li>
+        <li>[DETAIL]</li>
+        <li>[DETAIL]</li>
+        <li>[DETAIL]</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">
+    <h2>Choose Your Option</h2>
+    <p>Review the options below and choose the one that best fits your trip</p>
+  </div>
+
+  <div class="option-grid">
+
+    <article class="option-card">
+      <div class="option-top">
+        <div class="option-name">[OPTION 1 NAME]</div>
+        <div class="option-description">[OPTION 1 SHORT DESCRIPTION]</div>
+        <div class="price">[OPTION 1 PRICE]</div>
+        <div class="price-note">[PRICE DESCRIPTION]</div>
+      </div>
+      <div class="option-body">
+        <h4>Includes</h4>
+        <ul>
+          <li>[INCLUSION]</li>
+          <li>[INCLUSION]</li>
+          <li>[INCLUSION]</li>
+          <li>[INCLUSION]</li>
+          <li>[INCLUSION]</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="option-card option-two">
+      <div class="option-top">
+        <div class="option-name">[OPTION 2 NAME]</div>
+        <div class="option-description">[OPTION 2 SHORT DESCRIPTION]</div>
+        <div class="price">[OPTION 2 PRICE]</div>
+        <div class="price-note">[PRICE DESCRIPTION]</div>
+      </div>
+      <div class="option-body">
+        <h4>Includes</h4>
+        <ul>
+          <li>[INCLUSION]</li>
+          <li>[INCLUSION]</li>
+          <li>[INCLUSION]</li>
+          <li>[INCLUSION]</li>
+          <li>[INCLUSION]</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="option-card option-three">
+      <div class="option-top">
+        <div class="option-name">[OPTION 3 NAME]</div>
+        <div class="option-description">[OPTION 3 SHORT DESCRIPTION]</div>
+        <div class="price">[OPTION 3 PRICE]</div>
+        <div class="price-note">[PRICE DESCRIPTION]</div>
+      </div>
+      <div class="option-body">
+        <h4>Includes</h4>
+        <ul>
+          <li>[INCLUSION]</li>
+          <li>[INCLUSION]</li>
+          <li>[INCLUSION]</li>
+          <li>[INCLUSION]</li>
+          <li>[INCLUSION]</li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section>
+  <div class="not-included">
+    <h3>Not Included</h3>
+    <ul>
+      <li>[NOT INCLUDED ITEM]</li>
+      <li>[NOT INCLUDED ITEM]</li>
+      <li>[NOT INCLUDED ITEM]</li>
+      <li>[NOT INCLUDED ITEM]</li>
+      <li>[NOT INCLUDED ITEM]</li>
+      <li>[NOT INCLUDED ITEM]</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="payment">
+    <h2>Pricing & Important Dates</h2>
+    <p>
+      Pricing is based on current availability and is subject to
+      change until the reservation and required deposit are confirmed.
+    </p>
+
+    <div class="payment-grid">
+      <div class="payment-item">
+        <span>Deposit</span>
+        <strong>[DEPOSIT AMOUNT]</strong>
+        <small class="payment-note">Due [DEPOSIT DATE]</small>
+      </div>
+
+      <div class="payment-item">
+        <span>Final Payment</span>
+        <strong>[FINAL PAYMENT DATE]</strong>
+      </div>
+
+      <div class="payment-item">
+        <span>Travel Dates</span>
+        <strong>[TRAVEL DATES]</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="response-section">
+
+  <div class="eyebrow">Your Response</div>
+
+  <h2>Ready to move forward or have a question?</h2>
+
+  <p class="response-intro">
+    Enter your name below. You may select an option if you are ready to move forward,
+    or simply send me a question before deciding.
+  </p>
+
+  <form
+    class="response-form"
+    action="https://submit-form.com/NkK6KqEND"
+    method="POST">
+
+    <input type="hidden" name="trip" value="[TRIP TITLE]">
+    <input type="hidden" name="travel_dates" value="[TRAVEL DATES]">
+    <input type="hidden" name="_email.subject" value="New Proposal Response - [TRIP TITLE]">
+
+    <div class="name-field">
+      <label for="client-name">Your Name</label>
+      <input
+        type="text"
+        id="client-name"
+        name="client_name"
+        placeholder="Enter your name"
+        required>
+    </div>
+
+    <div class="selection-options">
+
+      <label class="selection-card">
+        <input
+          type="radio"
+          name="selection"
+          value="[OPTION 1 NAME] - [OPTION 1 PRICE]">
+        <span class="selection-content">
+          <strong>[OPTION 1 NAME]</strong>
+          <span>[OPTION 1 PRICE]</span>
+        </span>
+      </label>
+
+      <label class="selection-card">
+        <input
+          type="radio"
+          name="selection"
+          value="[OPTION 2 NAME] - [OPTION 2 PRICE]">
+        <span class="selection-content">
+          <strong>[OPTION 2 NAME]</strong>
+          <span>[OPTION 2 PRICE]</span>
+        </span>
+      </label>
+
+      <label class="selection-card">
+        <input
+          type="radio"
+          name="selection"
+          value="[OPTION 3 NAME] - [OPTION 3 PRICE]">
+        <span class="selection-content">
+          <strong>[OPTION 3 NAME]</strong>
+          <span>[OPTION 3 PRICE]</span>
+        </span>
+      </label>
+
+    </div>
+
+    <div class="question-box">
+      <label for="questions">Questions or comments?</label>
+      <textarea
+        id="questions"
+        name="questions"
+        rows="4"
+        placeholder="Optional"></textarea>
+    </div>
+
+    <button class="submit-button" type="submit">
+      SUBMIT RESPONSE
+    </button>
+
+  </form>
+
+  <div class="disclaimer">
+    Selecting an option does not confirm a reservation.
+    Current availability and pricing will be verified before booking.
+    <br><br>
+    This proposal is provided for planning purposes only and does not constitute a confirmed reservation.
+    Pricing, promotions, availability, package inclusions, taxes, fees and supplier terms are
+    subject to change until booked and deposited.
+  </div>
+
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="footer-tagline">Turning plans into postcards.</div>
+  <a href="https://postcardstraveldesign.com">postcardstraveldesign.com</a>
+</footer>
+
+</body>
+</html>
